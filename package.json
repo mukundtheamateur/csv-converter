@@ -14,7 +14,9 @@
     "express": "~4.16.1",
     "express-flash": "^0.0.2",
     "express-session": "^1.17.2",
+    "fast-csv": "^4.3.6",
     "http-errors": "~1.6.3",
+    "json2csv": "^5.0.6",
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",
     "popups": "^1.1.3"

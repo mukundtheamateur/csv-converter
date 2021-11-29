@@ -12,14 +12,20 @@
   <style>
     body{
     height: auto;
-    margin-top: 10px;
-    padding: 30px;
+    /* margin-top: 10px; */
+    /* padding: 30px; */
     background-size: cover;
     font-family: 'Courier New', Courier, monospace;
     background-color:black;
     
 }
-
+.wave-container {
+  position: relative;
+  background: rgb(0, 0, 0);
+  color: #FFF;
+  text-align: center;
+  overflow: hidden;
+}
 .container{
   color: white;
 }
@@ -84,8 +90,8 @@
 header {
     position:sticky;
     display:inline-flex;
-font-size: 46px;
-border: solid 2px rgb(253, 253, 253);
+    font-size: 46px;
+    border: solid 2px rgb(253, 253, 253);
   }
 
 
@@ -95,6 +101,7 @@ border: solid 2px rgb(253, 253, 253);
     padding: 5%;
     text-align: center;
     font-size: 50;
+    padding-bottom: 0%;
   }
     
   /* Styling the area of the slides */
@@ -164,7 +171,7 @@ border: solid 2px rgb(253, 253, 253);
     }
   }
 
-  #marks, #Roll, #name{
+  #marks, #roll, #name{
     margin: 10px;
     font-size: 20px;
     font-style: 20px;
@@ -205,24 +212,39 @@ font-size: 16px;
     <div class="container">
       <h1>TECHNOVATE 2K21</h1>
       <p>ORATORS FOR LIFE (Evaluation form) </p>
-      <hr>
-  
-      
+      <br>
       <label for="Roll No."><b>Roll No.</b></label>
-      <input type="int" placeholder="Enter Roll no." name="roll" id="roll" size="40" required="True"> 
+      <input type="int" placeholder="Enter Roll no." name="roll" id="roll"  style="margin-top: 20px;"> 
       
   <br>
       <label for="name"><b>Name</b></label>
-      <input type="name" placeholder="Enter Name" name="name" id="name"size="40" required="True">
+      <input type="name" placeholder="Enter Name" name="name" id="name" >
       <br>
 
       <label for="marks"><b>Marks</b></label>
-      <input type="marks" placeholder="Enter marks" name="marks" id="marks" size="40"required="True">
+      <input type="marks" placeholder="Enter marks" name="marks" id="marks">
 
   <br>
 
-  <button type="submit" required="True" value="submit" name="submit">submit</button> 
+  <button type="submit"  value="submit" name="submit">submit</button> 
   </form>
+  <div>
+    <h3 style="color: red;">Click download only when all the data is stored ! If clicked by mistake contact developer team. Thank you !</h3>
+  </div>
+  <form action="/download" method="post">
+    <button type="submit" value="submit" name="submit"> Convert to excel file</button><br><br>
+    
+  </form>
+  <form action="/csvfile" method="get">
+    <input type="radio" id="download" name="download" value="download">
+      <label >Are you sure you want to download?</label><br><br>
+    <button type="download" value="download" name="download"> Download csv file</button><br><br>
+  </div>
+  <div class="wave-container">
+    <h1>Electronics Project Club </h1>
+    <p>Made with love by Developer team </p>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff9100" fill-opacity="2" d="M0,192L0,64L62.6,64L62.6,96L125.2,96L125.2,192L187.8,192L187.8,96L250.4,96L250.4,192L313,192L313,128L375.7,128L375.7,96L438.3,96L438.3,96L500.9,96L500.9,288L563.5,288L563.5,0L626.1,0L626.1,288L688.7,288L688.7,0L751.3,0L751.3,192L813.9,192L813.9,288L876.5,288L876.5,0L939.1,0L939.1,224L1001.7,224L1001.7,224L1064.3,224L1064.3,96L1127,96L1127,128L1189.6,128L1189.6,96L1252.2,96L1252.2,96L1314.8,96L1314.8,256L1377.4,256L1377.4,320L1440,320L1440,320L1377.4,320L1377.4,320L1314.8,320L1314.8,320L1252.2,320L1252.2,320L1189.6,320L1189.6,320L1127,320L1127,320L1064.3,320L1064.3,320L1001.7,320L1001.7,320L939.1,320L939.1,320L876.5,320L876.5,320L813.9,320L813.9,320L751.3,320L751.3,320L688.7,320L688.7,320L626.1,320L626.1,320L563.5,320L563.5,320L500.9,320L500.9,320L438.3,320L438.3,320L375.7,320L375.7,320L313,320L313,320L250.4,320L250.4,320L187.8,320L187.8,320L125.2,320L125.2,320L62.6,320L62.6,320L0,320L0,320Z"></path></svg>
+  </div>
 </body>
 
 
