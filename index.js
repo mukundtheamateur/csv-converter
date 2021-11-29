@@ -9,35 +9,32 @@ var con = mysql.createConnection({
      host : "localhost",
      user : "root",
      password : "password",
-     database : "online_vidya"
+     database : "technovate"
 });
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/index.html'));
 });
 app.post('/',function(req,res){
+  var roll = req.body.roll;
+  var name = req.body.name;
+  var marks = req.body.marks;
 
-  var sno = req.body.sno;
-  var Name = req.body.Name;
-  var Phone = req.body.Phone;
-  var email = req.body.email;
-  var course = req.body.course;
  
-  res.write('You sent the sno "' + req.body.sno+'".\n');
-  res.write('You sent the name "' + req.body.Name+'".\n');
-  res.write('You sent the phoneno "' + req.body.Phone+'".\n');
-  res.write('You sent the email "' + req.body.email+'".\n');
-  res.write('You sent the course "' + req.body.course+'".\n');
-
+  // res.write('You sent the sno "' + req.body.sno+'".\n');
+  // res.write('You sent the name "' + req.body.Name+'".\n');
+  // res.write('You sent the phoneno "' + req.body.Phone+'".\n');
+  // res.write('You sent the email "' + req.body.email+'".\n');
+  // res.write('You sent the course "' + req.body.course+'".\n');
 
 
   con.connect(function(err) {
-  var sql = "INSERT INTO students (sno, Name, Phone, email, course) VALUES ('"+sno+"','"+Name+"','"+Phone+"', '"+email+"','"+course+"')";
+  var sql = "INSERT INTO technovate (roll, name, marks) VALUES ('"+roll+"','"+name+"','"+marks+"')";
   con.query(sql, function (err, result) {
     if(err){  
 
           if(err.errno==1062){
 
-  var sql = 'UPDATE students SET Name ="' + req.body.Name+'",Phone="'+ req.body.Phone+'",course="' + req.body.course+'" WHERE email ="'+ req.body.email+'"';
+  var sql = 'UPDATE technovate SET name ="' + req.body.name+'",marks="'+ req.body.marks+'",roll="' + req.body.roll;
   con.query(sql, function (err, result) {
   if (err) throw err;
   console.log(result.affectedRows + " record(s) updated");
@@ -51,17 +48,23 @@ app.post('/',function(req,res){
         }
   }
     console.log("1 record inserted");
-     res.end();
+
+    res.redirect('/');
+
+    res.end();
+
   });
   });
 });
+
+
 app.post('/search',function(req,res){
       con.connect(function(err) {
-con.query('SELECT * FROM students ', function (err, result) {
+con.query('SELECT * FROM technovate ', function (err, result) {
 if (err) throw err;
 console.log(result);
 });
 });
 });
 app.listen(3000);
-console.log("Running at Port 3000");
+console.log("Running at Port localhost:3000");

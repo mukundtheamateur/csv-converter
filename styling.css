@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="styling.css"> -->
-  <title>Technovate 2k21</title>
-
-
-  <style>
-    body{
+body{
     height: auto;
     margin-top: 10px;
     padding: 30px;
@@ -182,49 +170,3 @@ font-size: 16px;
   }
 
 
-
-  </style>
-
-</head>
-
-<body>
-  
-
-  <div class="topnav">
-    <a class="active" href="https://epccgc.herokuapp.com">Official page</a>
-    <a href="" action="/search">For Troubleshoot -> +919119964642 </a>
-
-  </div>
-
-  <header style="color:white;">Electronics Project Club</header>
-
-
-
-
-  <form action="/" method="post">
-    <div class="container">
-      <h1>TECHNOVATE 2K21</h1>
-      <p>ORATORS FOR LIFE (Evaluation form) </p>
-      <hr>
-  
-      
-      <label for="Roll No."><b>Roll No.</b></label>
-      <input type="int" placeholder="Enter Roll no." name="roll" id="roll" size="40" required="True"> 
-      
-  <br>
-      <label for="name"><b>Name</b></label>
-      <input type="name" placeholder="Enter Name" name="name" id="name"size="40" required="True">
-      <br>
-
-      <label for="marks"><b>Marks</b></label>
-      <input type="marks" placeholder="Enter marks" name="marks" id="marks" size="40"required="True">
-
-  <br>
-
-  <button type="submit" required="True" value="submit" name="submit">submit</button> 
-  </form>
-</body>
-
-
-
-</html>
