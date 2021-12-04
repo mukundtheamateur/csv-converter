@@ -12,3 +12,4 @@
 6. install prerequisite to run this project (you will encounter those from 3rd step)
 7. finally : node index.js  
 8. To get link : lt --port 3000 --subdomain yoursubdomain
+9. You can also create link using ngrok
