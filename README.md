@@ -16,3 +16,8 @@
 
 
 to use Mysql in command prompt : mysql -uroot -proot
+
+to create database table: CREATE DATABASE csvconverter;
+-> Next step: 
+![image](https://user-images.githubusercontent.com/61543246/157070661-4b2546ed-d3ba-4148-b356-5b5d5105241c.png)
+
