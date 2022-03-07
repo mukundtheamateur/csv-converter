@@ -1,6 +1,6 @@
 # Website which takes input from user and store it into the MySQL database and convert it into .csv format
 
-# Deployment: Hosted on custom made server. Localtunnel is used for creating custom subdomain link for the website.
+# Deployment 1: Hosted on custom made server. Localtunnel is used for creating custom subdomain link for the website.
 
 # Steps:
 
