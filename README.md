@@ -13,3 +13,6 @@
 7. finally : node index.js  
 8. To get link : lt --port 3000 --subdomain yoursubdomain
 9. You can also create link using ngrok
+
+
+to use Mysql in command prompt : mysql -uroot -proot
